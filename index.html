@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Balancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Balancer</h1>
+        <label for="expensesText">Expenses (Name [TAB] Amount):</label>
+        <!-- <textarea id="expensesText" rows="10" placeholder="Name1     12.3 \n Name2      4.56"></textarea> -->
+        <textarea id="expensesText" rows="10" placeholder="Name 1     12.3&#10Name 2     4.56&#10Name 3     789&#10..."></textarea>
+
+        <p>Note: To separate the name and amount, use the TAB key. On MacOS, use Option + Control + Tab.</p>
+        
+        <label for="tolerance">Tolerance (e.g., 2):</label>
+        <input type="number" id="tolerance" value="2" placeholder="2" min="0" step="0.01">
+        
+        <button onclick="runExpenseBalancer()">Run</button>
+        
+        <h2>Transactions</h2>
+        <div id="result">Result...</div>
+        <div id="ignored">Ignored...</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
